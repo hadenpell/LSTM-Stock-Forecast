@@ -1,7 +1,0 @@
-2023-09-17 22:03:32 [INFO] Question: Which are the countries with GDP greater than 3000000000000?
-2023-09-17 22:03:47 [INFO] Question: Which are the countries with GDP greater than 3000000000000?
-2023-09-17 22:04:55 [INFO] Question: Which are the countries with GDP greater than 3000000000000?
-2023-09-17 22:10:06 [INFO] Question: Which are the countries with GDP greater than 3000000000000?
-2023-09-17 22:10:06 [INFO] Running PandasAI with openai LLM...
-2023-09-17 22:10:06 [INFO] Prompt ID: 11aac442-62ca-4384-8cda-bc00e645696b
-2023-09-17 22:10:07 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
