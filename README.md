@@ -42,7 +42,7 @@ In Dropout layers, a proportion of connections to LSTM units are excluded from t
 
 ## Tuning the learning rate
 I created a model specifically for tuning the learning rate and plotted the results. Based on the chart it appeared that the optimal learning rate was 0.001.
-[INSERT CHART]
+![alt text](https://github.com/hadenpell/LSTM-Stock-Forecast/blob/main/learning_rate.png?raw=True)
 
 ## Train model
 I repeated the same steps to build and compile my final model with the chosen learning rate, except for a few changes:
