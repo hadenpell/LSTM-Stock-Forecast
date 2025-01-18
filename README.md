@@ -53,7 +53,7 @@ I repeated the same steps to build and compile my final model with the chosen le
 ## Predictions
 I prepared the test set the same way I windowed and batched my train and validation sets. The main difference is that I did not shuffle the data or separate the features and labels. Because of this, I created a window with my window_size only and not window_size + 1 to only include the time series actual values for each window and not their corresponding next value.
 Then I loaded the saved model (/model1) and predicted on the test set. To get the actual prediction values, I called reverse_transform on the scaled output. The test set RMSE was 8.46.
-[IMAGE]
+![alt text](https://github.com/hadenpell/LSTM-Stock-Forecast/blob/main/test_preds.png?raw=True)
 
 I repeated the same process for the train set to check for overfitting, and got a train RMSE of about 4. It’s better than the test set, as expected, but not enough of a discrepancy to be concerned about overfitting.
 
@@ -65,7 +65,7 @@ I approached the forecast as follows:
 * Continue to shift the window using predictions as features until I have 30 days of predictions.
 
 Here was the final forecast:
-[IMAGE]
+![alt text](https://github.com/hadenpell/LSTM-Stock-Forecast/blob/main/final_fcst.png?raw=True)
 
 # Conclusions + Drawbacks
 The final forecast didn't look great. Though the values were within a reasonable range for what you'd expect, the forecast remained fairly stable with a slight upward trend of ... not even one dollar.
