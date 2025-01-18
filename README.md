@@ -1,4 +1,5 @@
 # Predicting TSLA Stock Prices with LSTM 
+# Background
 LSTM (Long Short Term Memory) is a Recurrent Neural Network (RNN) that is known to do well on time series problems. After taking the Coursera TensorFlow Developer courses, I wanted to attempt my own LSTM project and apply the model to financial time series data as a way to better understand its inner workings. 
 
 I am fully aware that the stock market is volatile and generally unpredictable. A simple LSTM is unlikely to be able to reliably forecast stock prices, especially if it's not also analyzing market sentiment or external events. 
@@ -72,4 +73,8 @@ The final forecast didn't look great. Though the values were within a reasonable
 
 As the model predicts out farther and farther, uncertainty compounds. It’s important to consider this when choosing how many days ahead you want to forecast and how seriously you want to take each prediction.
 
-I built this model to only predict ahead 1 day at a time, for 30 days. An alternative would be to train the model to actually forecast 30 days at a time, which may have mitigated some of the compounding error issues and instead of using predictions to forecast would have predicted a 30-day sequence all at once based on the prior 20 days. This would have required a final Dense layer of size 30 rather than 1 in my model architecture. 
+I built this model to only predict ahead 1 day at a time, for 30 days. An alternative would be to train the model to actually forecast 30 days at a time (multi-step time series forecasting), which may have mitigated some of the compounding error issues and instead of using predictions to forecast would have predicted a 30-day sequence all at once based on the prior 20 days. This would require a final Dense layer of size 30 rather than 1 in my model architecture. 
+
+Additionally, as I stated in the Background section, a simple LSTM with only historical data as a feature is not ideal for forecasting the stock market, which is a highly volatile, often random time series dataset.
+
+However, this project allowed me to learn about how to format time series data for LSTM input, how to compile, train, and tune an LSTM, and work with the TensorFlow library, so it was a success on those fronts.
